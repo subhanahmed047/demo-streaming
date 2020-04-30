@@ -1,5 +1,13 @@
 import React from 'react';
+import Wrapper from './Wrapper';
+import Logo from './Logo';
+import Nav from './Nav';
 
-const Header = () => <h1>HEADER</h1>
+const Header = () => (
+  <Wrapper>
+    <Logo />
+    <Nav />
+  </Wrapper>
+);
 
 export default Header;
