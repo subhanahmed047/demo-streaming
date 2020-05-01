@@ -1,12 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
-import Button from '../shared/Button';
-
-const NavItem = styled.a`
-  padding: 0px 20px;
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-`;
+import { Button, Link } from '../shared/';
+import MobileOverlay from '../mobileOverlay/';
 
 const NavWrapper = styled.ul`
   list-style: none;
@@ -14,12 +9,21 @@ const NavWrapper = styled.ul`
 `;
 
 const Nav = () => {
+  const [mobileOverlayVisiblity, setMobileOverlayVisibility] = useState(false);
+
   return (
     <>
       <NavWrapper>
-        <NavItem>Log in</NavItem>
+        <Link desktopOnly>Log in</Link>
       </NavWrapper>
-      <Button>Start your free trial</Button>
+      <Button desktopOnly>Start your free trial</Button>
+      <Button mobileOnly onClick={() => setMobileOverlayVisibility(true)}>
+        &#9776;
+      </Button>
+      <MobileOverlay
+        show={mobileOverlayVisiblity}
+        onCloseMobileOverlay={() => setMobileOverlayVisibility(false)}
+      />
     </>
   );
 };

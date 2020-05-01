@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import Link from './Link';
 
-const Button = styled.a`
+const Button = styled(Link)`
   margin-left: 20px;
   padding: 9px 25px;
   background: ${(props) => props.theme.secondary.dark};
