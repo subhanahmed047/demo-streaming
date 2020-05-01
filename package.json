@@ -11,14 +11,17 @@
     "styled-components": "^5.1.0"
   },
   "devDependencies": {
-    "parcel-bundler": "^1.12.4",
     "babel-polyfill": "^6.26.0",
     "concurrently": "^5.2.0",
+    "parcel-bundler": "^1.12.4",
     "nodemon": "^2.0.3"
   },
   "scripts": {
-    "start": "yarn build",
-    "build": "parcel index.html --port 3000 --open",
-    "prebuild": "rm -rf dist"
+    "prebuild": "rm -rf dist",
+    "build-watch": "parcel watch ./client/index.html",
+    "start-watch": "nodemon server/index.js",
+    "dev": "concurrently --kill-others \"yarn start-watch\" \"yarn build-watch\"",
+    "build": "parcel build ./client/index.html",
+    "start": "yarn build && node server/index.js"
   }
 }
