@@ -1,21 +1,34 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Content from '../components/content';
 import TopBar from '../components/topBar';
-import { CardContainer, Card } from '../components/card';
+import { Grid } from '../components/card';
+import { getSeries } from '../services';
 
-const SeriesPage = () => (
-  <>
-    <TopBar title="Popular Series" />
-    <Content>
-      <CardContainer>
-        <Card
-          title="Popular Series"
-          linkTo="/"
-          img="https://streamcoimg-a.akamaihd.net/000/128/61/12861-PosterArt-ec32a81986a45eac7e080112075ab466.jpg"
-        ></Card>
-      </CardContainer>
-    </Content>
-  </>
-);
+const SeriesPage = () => {
+  const [series, setSeries] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    getSeries()
+      .then((res) => res.json())
+      .then((series) => {
+        setTimeout(() => {
+          setSeries(series);
+          setIsLoading(false);
+        }, 1000);
+      })
+      .catch((err) => setError(err));
+  }, []);
+
+  return (
+    <>
+      <TopBar title="Popular Series" />
+      <Content>
+        <Grid data={series} isLoading={isLoading} error={error} />
+      </Content>
+    </>
+  );
+};
 
 export default SeriesPage;

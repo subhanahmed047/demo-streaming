@@ -10,7 +10,6 @@ const Container = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  border: 2px solid ${({ theme }) => theme.secondary.light};
   border-radius: 2px;
   align-items: center;
   display: flex;
@@ -42,6 +41,7 @@ const CardTitle = styled.p`
   font-weight: 500;
   font-size: 14px;
   padding-top: 0.1em;
+  text-overflow: ellipsis;
 `;
 
 const Card = ({ img, type, title, linkTo }) => (
