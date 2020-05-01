@@ -2,10 +2,10 @@ import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     body {
-        font-family: "Raleway", "Helvetica Neue", "Oxygen", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
+        font-family: "Montserrat", "Helvetica Neue", "Oxygen", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        font: 16px/1.5 "Dosis", sans-serif;
+        font: 16px/1.5 "Montserrat", sans-serif;
     }
     * {
       box-sizing: border-box;
@@ -13,8 +13,8 @@ const GlobalStyle = createGlobalStyle`
       padding: 0;
     }
     a {
-      font-weight: 550;
-      color: #edf0f1;
+      font-weight: 300;
+      color: white;
       text-decoration: none;
     } 
 `;
