@@ -8,8 +8,8 @@ const HomePage = () => (
     <TopBar title="Popular Titles" />
     <Content>
       <CardContainer>
-        <Card></Card>
-        <Card></Card>
+        <Card type="SERIES" title="Popular Series" linkTo="/series"></Card>
+        <Card type="MOVIES" title="Popular Movies" linkTo="/movies"></Card>
       </CardContainer>
     </Content>
   </>
