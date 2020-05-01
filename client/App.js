@@ -6,10 +6,10 @@ import {
   SeriesPage,
   MoviesPage,
   PageNotFoundPage,
-} from './client/pages';
-import Header from './client/components/header';
-import Footer from './client/components/footer';
-import { GlobalStyles, theme } from './client/theme';
+} from './pages';
+import Header from './components/header';
+import Footer from './components/footer';
+import { GlobalStyles, theme } from './theme';
 
 const Wrapper = styled.div`
   display: flex;
