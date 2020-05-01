@@ -9,11 +9,11 @@ const PROGRAM_TYPE_SERIES = 'series';
 const PROGRAM_TYPE_MOVIE = 'movie';
 
 app.get('/api/series', (req, res) => {
-  res.send(getDataByProgramType(PROGRAM_TYPE_SERIES));
+  res.json(getDataByProgramType(PROGRAM_TYPE_SERIES));
 });
 
 app.get('/api/movies', (req, res) => {
-  res.send(getDataByProgramType(PROGRAM_TYPE_MOVIE));
+  res.json(getDataByProgramType(PROGRAM_TYPE_MOVIE));
 });
 
 app.get('*', function (req, res) {

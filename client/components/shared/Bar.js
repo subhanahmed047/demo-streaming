@@ -5,6 +5,8 @@ const Bar = styled.header`
   display: flex;
   color: white;
   align-items: center;
+  padding-left: 5em;
+  padding-right: 5em;
 
   @media ${devices.maxWidth.LAPTOP} {
     padding-left: 1em;

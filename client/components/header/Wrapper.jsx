@@ -4,7 +4,8 @@ import Bar from '../shared/Bar';
 
 const Wrapper = styled(Bar)`
   justify-contents: space-between;
-  padding: 0.4em 8em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em;
   background: ${(props) => props.theme.primary.light};
   background-image: linear-gradient(
     to bottom,

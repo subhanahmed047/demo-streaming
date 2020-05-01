@@ -37,7 +37,7 @@ const ImageText = styled.h3`
   height: 2em;
 `;
 
-const CardTitle = styled.a`
+const CardTitle = styled.p`
   color: ${({ theme }) => theme.secondary.dark};
   font-weight: 500;
   font-size: 14px;

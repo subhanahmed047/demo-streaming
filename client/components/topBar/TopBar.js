@@ -6,7 +6,8 @@ const Container = styled(Bar)`
   justify-content: flex-start;
   height: 2em;
   background: ${({ theme }) => theme.secondary.dark};
-  padding: 1.5em 8em;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
   box-shadow: 0 4px 2px -1px rgb(65, 65, 65, 0.3);
 `;
 
