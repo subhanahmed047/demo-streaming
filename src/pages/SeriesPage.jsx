@@ -5,7 +5,7 @@ import { CardContainer, Card } from '../components/card';
 
 const SeriesPage = () => (
   <>
-    <TopBar title="Popular Titles" />
+    <TopBar title="Popular Series" />
     <Content>
       <CardContainer>
         <Card
