@@ -7,6 +7,7 @@ const theme = {
     light: '#505050',
     dark: '#323232',
   },
+  linkGrey: '#bdbdbd',
 };
 
 export default theme;

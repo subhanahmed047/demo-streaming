@@ -1,19 +1,65 @@
 import React from 'react';
 import styled from 'styled-components';
+import FooterNav from './FooterNav';
+import devices from '../../constants/devices';
+import SocialIcons from './SocialIcons';
+import StoreIcons from './StoreIcons';
 
 const FooterWrapper = styled.footer`
   display: flex;
   flex-direction: column;
-  min-height: 2em;
-  color: white;
-  background: ${(props) => props.theme.secondary.dark};
+  background: black;
   flex-wrap: wrap;
-  padding: 1.5em 4em;
+  padding: 2% 15%;
+`;
+
+const CopyrightText = styled.p`
+  font-size: 12px;
+  font-weight: 300;
+  color: white;
+  padding-top: 1em;
+
+  @media ${devices.maxWidth.TABLET} {
+    text-align: center;
+    font-size: 10px;
+    padding-top: 2em;
+  }
+`;
+
+const IconsContainer = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 1.5em;
+
+  @media ${devices.maxWidth.TABLET} {
+    justify-content: center;
+  }
+`;
+
+const FooterContent = styled.div`
+  display: flex;
+  flex-direction: column;
+  @media ${devices.maxWidth.TABLET} {
+    flex-direction: column-reverse;
+  }
 `;
 
 const Footer = () => (
   <FooterWrapper>
-    <h1>Footer</h1>
+    <FooterNav />
+
+    {
+      <FooterContent>
+        <CopyrightText>
+          Copyright © 2020 DEMO Streaming. All Rights Reserved.
+        </CopyrightText>
+        <IconsContainer>
+          <SocialIcons />
+          <StoreIcons />
+        </IconsContainer>
+      </FooterContent>
+    }
   </FooterWrapper>
 );
 
