@@ -43,4 +43,8 @@ const sortDataByTitle = (data) => {
 };
 
 const port = process.env.PORT || 3000;
-app.listen(port, () => console.log(`Server is Listening at Port ${port}`));
+const server = app.listen(port, () =>
+  console.log(`Server is Listening at Port ${port}`)
+);
+
+module.exports = server;
