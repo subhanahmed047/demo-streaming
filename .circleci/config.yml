@@ -11,10 +11,16 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
+  deploy-to-heroku:
+    executor: heroku/default
+    steps:
+      - checkout
+      - heroku/install
+      - heroku/deploy-via-git
 workflows:
   build-and-test:
     jobs:
       - build-and-test
   heroku_deploy:
     jobs:
-      - heroku/deploy-via-git
+      - deploy-to-heroku
