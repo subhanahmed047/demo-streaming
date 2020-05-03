@@ -1,5 +1,8 @@
 ## **DEMO Streaming Application**
 
+![Demo Streaming](https://circleci.com/gh/subhanahmed047/demo-streaming.svg?style=shield&circle-token=b213ce11a1e71a440547a723d6d76bec57e792ed)
+![Heroku](https://heroku-badge.herokuapp.com/?app=heroku-badge)
+
 ## Introduction
 
 A simple streaming app that shows `series` and `movies` in a grid. The app is built using [Parcel](https://parceljs.org/) to gain more control over the build configurations like naming conventions without having to eject the app.
@@ -35,5 +38,4 @@ To run the tests run the following command:
 
     yarn test
 
-
-The app uses [Jest](https://jestjs.io/) to run the tests.
+The app uses [Jest](https://jestjs.io/) to run the tests. The app is integrated with circle CI that runs the tests and creates a new build on every push to make sure things run smooth. The app is automatically deployed to Heroku.
