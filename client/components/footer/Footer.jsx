@@ -10,7 +10,7 @@ const FooterWrapper = styled.footer`
   flex-direction: column;
   background: black;
   flex-wrap: wrap;
-  padding: 2% 15%;
+  padding: 2% 5em;
 `;
 
 const CopyrightText = styled.p`
@@ -19,7 +19,7 @@ const CopyrightText = styled.p`
   color: white;
   padding-top: 1em;
 
-  @media ${devices.maxWidth.TABLET} {
+  @media ${devices.maxWidth.TABLET_L} {
     text-align: center;
     font-size: 10px;
     padding-top: 2em;
@@ -32,7 +32,7 @@ const IconsContainer = styled.div`
   flex-wrap: wrap;
   padding-top: 1.5em;
 
-  @media ${devices.maxWidth.TABLET} {
+  @media ${devices.maxWidth.TABLET_L} {
     justify-content: center;
   }
 `;
@@ -40,7 +40,7 @@ const IconsContainer = styled.div`
 const FooterContent = styled.div`
   display: flex;
   flex-direction: column;
-  @media ${devices.maxWidth.TABLET} {
+  @media ${devices.maxWidth.TABLET_L} {
     flex-direction: column-reverse;
   }
 `;

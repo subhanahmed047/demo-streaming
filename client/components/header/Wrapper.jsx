@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import devices from '../../constants/devices';
 import Bar from '../shared/Bar';
 
 const Wrapper = styled(Bar)`

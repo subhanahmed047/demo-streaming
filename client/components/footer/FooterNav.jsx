@@ -22,7 +22,7 @@ const Nav = styled.nav`
     }
   }
 
-  @media ${devices.maxWidth.TABLET} {
+  @media ${devices.maxWidth.TABLET_L} {
     display: flex;
     flex-wrap: wrap;
     text-align: center;

@@ -23,7 +23,7 @@
     "prebuild": "rm -rf dist",
     "build-watch": "parcel watch ./client/index.html",
     "start-watch": "nodemon server/index.js",
-    "dev": "concurrently --kill-others \"yarn test\" \"yarn start-watch\" \"yarn build-watch\"",
+    "dev": "concurrently --kill-others \"yarn start-watch\" \"yarn build-watch\"",
     "build": "parcel build ./client/index.html --no-source-maps",
     "start": "yarn test && yarn build && node server/index.js"
   },

@@ -10,18 +10,15 @@ const Container = styled.ul`
   display: flex;
   justify-content: flex-end;
   list-style: none;
+  flex-wrap: wrap;
   cursor: pointer;
 
   @media ${devices.maxWidth.TABLET} {
     justify-content: center;
-
-    img {
-      width: 40%;
-    }
   }
 
   img {
-    margin-top: 2em;
+    margin-top: 1em;
     padding-right: 1em;
     width: 135px;
     height: auto;

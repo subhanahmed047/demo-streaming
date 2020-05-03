@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import devices from '../../constants/devices';
 
 const Link = styled.a`
-  padding: 0px 20px;
   transition: all 0.3s ease 0s;
   cursor: pointer;
 
@@ -10,10 +9,10 @@ const Link = styled.a`
     mobileOnly &&
     `
       display: none;
-      @media ${devices.maxWidth.TABLET} {
+      @media ${devices.maxWidth.TABLET_S} {
         display: initial;
       }
-      @media ${devices.minWidth.TABLET} {
+      @media ${devices.minWidth.TABLET_S} {
         display: none;
       }
   `}
@@ -22,10 +21,10 @@ const Link = styled.a`
     desktopOnly &&
     `
       display: visible;
-      @media ${devices.maxWidth.TABLET} {
+      @media ${devices.maxWidth.TABLET_S} {
         display: none;
       }
-      @media ${devices.minWidth.TABLET} {
+      @media ${devices.minWidth.TABLET_S} {
         display: visible;
       }
   `}
