@@ -13,12 +13,13 @@ const SeriesPage = () => {
     getSeries()
       .then((res) => res.json())
       .then((series) => {
-        setTimeout(() => {
-          setSeries(series);
-          setIsLoading(false);
-        }, 1000);
+        setSeries(series);
+        setIsLoading(false);
       })
-      .catch((err) => setError(err));
+      .catch((err) => {
+        setError(err);
+        console.error(err);
+      });
   }, []);
 
   return (

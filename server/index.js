@@ -9,11 +9,19 @@ const PROGRAM_TYPE_SERIES = 'series';
 const PROGRAM_TYPE_MOVIE = 'movie';
 
 app.get('/api/series', (req, res) => {
-  res.json(getDataByProgramType(PROGRAM_TYPE_SERIES));
+  let series = sortDataByTitle(getDataByProgramType(PROGRAM_TYPE_SERIES));
+  if (req.query.limit) {
+    series = series.splice(0, req.query.limit);
+  }
+  res.json(series);
 });
 
 app.get('/api/movies', (req, res) => {
-  res.json(getDataByProgramType(PROGRAM_TYPE_MOVIE));
+  let series = sortDataByTitle(getDataByProgramType(PROGRAM_TYPE_MOVIE));
+  if (req.query.limit) {
+    series = series.splice(0, req.query.limit);
+  }
+  res.json(series);
 });
 
 app.get('*', function (req, res) {
@@ -24,7 +32,13 @@ app.get('*', function (req, res) {
 
 const getDataByProgramType = (programType) => {
   return dataSource.entries.filter(
-    (entry) => entry.programType === programType
+    (entry) => entry.programType === programType && entry.releaseYear > 2010
+  );
+};
+
+const sortDataByTitle = (data) => {
+  return data.sort((a, b) =>
+    a.title.localeCompare(b.title, 'en', { numeric: true })
   );
 };
 

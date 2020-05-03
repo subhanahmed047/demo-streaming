@@ -7,15 +7,18 @@ import { getMovies } from '../services';
 const MoviesPage = () => {
   const [movies, setMovies] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     getMovies()
       .then((res) => res.json())
       .then((movies) => {
-        setTimeout(() => {
-          setMovies(movies);
-          setIsLoading(false);
-        }, 1000);
+        setMovies(movies);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setError(err);
+        console.error(err);
       });
   }, []);
 
@@ -23,7 +26,7 @@ const MoviesPage = () => {
     <>
       <TopBar title="Popular Movies" />
       <Content>
-        <Grid data={movies} isLoading={isLoading} />
+        <Grid data={movies} isLoading={isLoading} error={error} />
       </Content>
     </>
   );

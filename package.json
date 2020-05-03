@@ -26,6 +26,6 @@
   },
   "proxy": "http://localhost:3000",
   "engines": {
-    "node": "8.9.3"
+    "node": "12.16.2"
   }
 }
