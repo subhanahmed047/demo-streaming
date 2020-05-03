@@ -1,12 +1,17 @@
 import React from 'react';
 import CardContainer from './CardContainer';
 import Card from './Card';
+import styled from 'styled-components';
+
+const Text = styled.h3`
+  text-align: center;
+`;
 
 const Grid = ({ isLoading, data, error }) => {
   return error ? (
-    <p>Oops, Something went wrong...</p>
+    <Text>Oops, Something went wrong...</Text>
   ) : isLoading ? (
-    <p>Loading...</p>
+    <Text>Loading...</Text>
   ) : (
     <CardContainer>
       {data &&
