@@ -7,6 +7,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: column;
   height: 18em;
+  width: 11.5em;
 `;
 
 const ImageContainer = styled.div`
